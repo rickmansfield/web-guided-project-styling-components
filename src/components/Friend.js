@@ -20,11 +20,22 @@ const StyledFriend = styled.div`
     transition: all 0.2s ease-in-out;
     background-color: ${({ theme }) => theme.secondaryColor};
   }
+
+  &::before {
+    content: "${props => props.besty ? '💚' : '🙂'}"
+  }
+
+  button {
+    background-color: ${props => props.theme.tertiaryColor};
+    &:hover {
+      transform: scale(5);
+    }
+  }
 `
 
-export default function Friend({ info, action }) {
+export default function Friend({ info, action, besty }) {
   return (
-    <StyledFriend>
+    <StyledFriend besty={besty}>
       {info.name}
       <button onClick={() => action(info.id)}>
         See details
