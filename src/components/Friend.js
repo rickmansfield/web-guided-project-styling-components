@@ -8,8 +8,18 @@ const StyledFriend = styled.div`
   padding: 8px;
   border-bottom: 2px solid white;
 
-  background-color: ${({ theme }) => theme.primaryColor};
-  color: white;
+  background-color: ${props => props.theme.primaryColor};
+  color: ${({ theme }) => theme.white};
+
+  @media ${({ theme }) => theme.breakpointMobile} {
+    width: initial;
+  }
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: ${({ theme }) => theme.secondaryColor};
+  }
 `
 
 export default function Friend({ info, action }) {
