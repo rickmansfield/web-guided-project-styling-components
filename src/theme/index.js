@@ -2,7 +2,7 @@
 export default {
     primaryColor: 'royalblue',
     secondaryColor: 'crimson',
-    tertiaryCorlor: 'mediumseagreen',
+    tertiaryCorlor: 'green',
     dangerColor: 'orange',
     black: 'black',
     white: 'white', 
@@ -14,4 +14,4 @@ export default {
         small: '4px',
         medium: '8px', 
     }
-}
+};
